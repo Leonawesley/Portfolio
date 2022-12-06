@@ -16,6 +16,7 @@
   width: 23%;
   background-color: rgb(79, 75, 133,0.5);
   padding-left: 35px;
+  border-bottom: 5px solid #072a5f;
 }
 
 .navigation
@@ -34,6 +35,7 @@
   padding: 30px;
   color: black;
   font-size: 20px;
+  text-decoration: none;
 }
 
 a.hover:hover{
@@ -153,15 +155,20 @@ a.hover:hover{
   "two three"
   "four five";
   margin: 0px 5%;
+  padding-top: 30px;
 }
 
 #work1{
   grid-area: one;
-  background-image: url(../images/02-portfolio-1.jpg);
-  display: flex;
+  background-image: url(../images/02-portfolio-1.jpg); 
+  /* display: flex;
   justify-content: flex-start;
   align-items: end;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
+}
+
+ #work1:hover{
+  background-image: transparent;
 }
 
 #work2{
@@ -191,11 +198,10 @@ a.hover:hover{
   background-repeat: no-repeat;
   margin: 5px;
   cursor: pointer;
-  display: grid;
-  align-content: end;
   display: flex;
   justify-content: flex-start;
   align-items: end;
+  align-content: end; 
   padding-bottom: 20px;
 
 }
@@ -211,14 +217,50 @@ a.hover:hover{
 }
 
 
+.contactClass{
+  display: grid;
+  min-height: 150px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 20% 77%;
+  grid-template-areas: 
+  "cm  cd";
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
 
-/* .workDetails p{
+.contactMe{
+  grid-area: cm;
   display: flex;
-  padding: 30px;
-} */
+  height:100px;
+  justify-content: center;
+}
 
+.contactMe p{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-right: 5px solid black;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 40px;
+  padding: 50px;
+}
 
+.contactDetails{
+  grid-area: cd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
 
+}
+
+.contactDetails p{
+  display: flex;
+  padding-top: 50px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 
 
@@ -240,4 +282,6 @@ body {
   }
 
 }
+
+
 
