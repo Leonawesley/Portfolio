@@ -14,7 +14,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 23%;
-  background-color: rgb(79, 75, 133);
+  background-color: rgb(79, 75, 133,0.5);
   padding-left: 35px;
 }
 
@@ -40,11 +40,204 @@ a.hover:hover{
   color: rgb(58, 21, 21);
 }
 
+
+#mainGrid{
+  display: grid;
+  min-height: 150px;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  "ti ti";
+  margin-bottom: 20px;
+}
+
+#titleImage{
+  grid-area: ti;
+  background-image: url("../images/02-hero-bg.jpg");
+  height: 150px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+}
+
+#subHeading{
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 5px solid #4267a0;
+  display: flex;
+  height: 50px;
+  width: 40%;
+  padding: 25px;
+  z-index: 100;
+}
+
+#subHeading p{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+/* .test{
+  background-image: url(../images/02-portfolio-4.jpg);
+ height: 200px;
+ width: auto;
+} */
+#details{
+  display: grid;
+  min-height: 150px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 20% 77%;
+  grid-template-areas: 
+  "am amd "
+  "w wd ";
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.aboutMe{
+  grid-area: am;
+  display: flex;
+  height: 200px;
+}
+
+.aboutMe p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-right: 5px solid black;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.work{
+  grid-area: w;
+  display: flex;
+  height: 750px;
+}
+
+.work p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-right: 5px solid black;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.aboutMeDetails{
+  grid-area: amd;
+  height: 200px;
+  display: flex;
+}
+
+.aboutMeDetails p{
+  display: flex;
+  padding: 30px;
+}
+
+.workDetails{
+  grid-area: wd;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 300px 200px 200px;
+  grid-template-areas: 
+  "one one"
+  "two three"
+  "four five";
+  margin: 0px 5%;
+}
+
+#work1{
+  grid-area: one;
+  background-image: url(../images/02-portfolio-1.jpg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding-bottom: 20px;
+}
+
+#work2{
+  grid-area: two;
+  background-image: url(../images/02-portfolio-2.jpg);
+  
+}
+
+#work3{
+  grid-area: three;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#work4{
+  grid-area: four;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#work5{
+  grid-area: five;
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+.workGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding-bottom: 20px;
+
+}
+
+.workheading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #4267a0;
+
+}
+
+
+
+/* .workDetails p{
+  display: flex;
+  padding: 30px;
+} */
+
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  
+
+}
+@media only screen and (max-width: 70em) {
+  .navigation {
+    display: none; 
+  }
+  .headerName{
+    justify-content: center;
+    width: 100%;
+
+  }
+
 }
 
